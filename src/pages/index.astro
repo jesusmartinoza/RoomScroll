@@ -1,16 +1,13 @@
 ---
-
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import AssistantApp from "../components/assistant/AssistantApp.svelte";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<DefaultLayout
+  subtitle="Create the home of your dreams with AI | Roomake"
+  description="Design and visualize your dream home using our AI-powered tool. Transform your ideas into reality effortlessly with Roomake."
+>
+  <div class="mb-8">
+    <AssistantApp client:idle />
+  </div>
+</DefaultLayout>

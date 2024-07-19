@@ -1,0 +1,105 @@
+<header
+  class="fixed z-50 w-full border-b-4 border-black bg-white py-2 text-black px-10 flex justify-center items-center"
+>
+  <div class="container flex items-center justify-center">
+    <div class="drawer z-50 w-auto md:hidden">
+      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content">
+        <label for="my-drawer" class="btn btn-ghost drawer-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="h-6 w-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </label>
+      </div>
+      <div class="drawer-side">
+        <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"
+        ></label>
+        <ul class="menu min-h-full w-80 bg-white p-4 text-black">
+          <span class="text-md font-bold text-black">Roomake</span>
+          <li>
+            <a href="/pricing">Pricing</a>
+          </li>
+          <span class="text-md font-bold text-black">Room Design Tools</span>
+          <li>
+            <a href="/tools/living-room-design">Living Room</a>
+          </li>
+          <li>
+            <a href="/tools/bedroom-design" class="!no-underline">Bedroom</a>
+          </li>
+          <li>
+            <a href="/tools/kitchen-design">Kitchen</a>
+          </li>
+          <li>
+            <a href="/tools/bathroom-design">Bathroom</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex grow items-center gap-2">
+      <img src="/images/logo.png" class="w-10" alt="Roomake logo" />
+      <a href="/" class="!no-underline">
+        <span>Roo<strong>make</strong></span>
+      </a>
+    </div>
+    <div class="btn btn-ghost hidden md:inline-grid">
+      <a href="/pricing" class="!no-underline">Pricing</a>
+    </div>
+    <div
+      class="dropdown dropdown-end dropdown-hover mr-2 hidden bg-white md:block"
+    >
+      <div tabindex="0" role="button" class="btn btn-ghost">
+        Room Design Tools
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="ml-1 h-4 w-4"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </div>
+      <ul
+        tabindex="0"
+        class="menu dropdown-content z-[1] w-52 rounded-box bg-white p-2 shadow"
+      >
+        <li>
+          <a href="/tools/living-room-design" class="!no-underline"
+            >Living Room</a
+          >
+        </li>
+        <li>
+          <a href="/tools/bedroom-design" class="!no-underline">Bedroom</a>
+        </li>
+        <li>
+          <a href="/tools/kitchen-design" class="!no-underline">Kitchen</a>
+        </li>
+        <li>
+          <a href="/tools/bathroom-design" class="!no-underline">Bathroom</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<style>
+  .drawer-side a {
+    text-decoration: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+</style>

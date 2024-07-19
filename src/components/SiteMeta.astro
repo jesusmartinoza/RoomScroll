@@ -1,0 +1,32 @@
+---
+const {
+  title,
+  subtitle,
+  description,
+  url,
+  image,
+  author = "Overflow AI",
+  canonical,
+} = Astro.props;
+---
+
+<!-- general meta -->
+<meta name="title" content={`${subtitle} | Roomake`} />
+<meta name="description" content={description} />
+<meta name="author" content={author} />
+
+<!-- open graph -->
+<meta property="og:title" content={`${subtitle} | Roomake`} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={url} />
+<meta
+  property="og:image"
+  content={Astro.site ? `${Astro.site}${image}` : image}
+/>
+<link href={canonical} rel="canonical" />
+
+<!-- twitter card -->
+
+<!-- page title -->
+<title>{subtitle} | Roomake</title>

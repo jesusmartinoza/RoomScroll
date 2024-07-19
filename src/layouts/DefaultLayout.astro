@@ -1,0 +1,59 @@
+---
+import "@astrojs/tailwind/base.css";
+import SiteMeta from "../components/SiteMeta.astro";
+import Header from "../components/common/Header.astro";
+import { DEBUG } from "../utils/config";
+
+const {
+  title = "Roomake",
+  description = "AI-powered tool to help design and visualize your dream home",
+  url,
+  subtitle = "Create the House of Your Dreams with AI",
+  image = "/img/dream-home-ai.jpg",
+  author = "Overflow AI",
+} = Astro.props;
+---
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!--link rel="manifest" href="/site.webmanifest" /-->
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"
+    />
+
+    <SiteMeta
+      title={title}
+      description={description}
+      subtitle={subtitle}
+      url=`${Astro.url}`
+      image=`https://enhance.cam${image}`
+      author={author}
+      canonical=`https://enhance.cam${Astro.url.pathname}`
+    />
+  </head>
+  <body>
+    {
+      DEBUG && (
+        <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: red; color: white; text-align: center; z-index: 1000;">
+          DEBUG MODE
+        </div>
+      )
+    }
+    <Header />
+    <main id="main-content" class="pt-20">
+      <slot />
+    </main>
+  </body>
+</html>
