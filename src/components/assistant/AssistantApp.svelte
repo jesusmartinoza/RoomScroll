@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import DropZone from "../common/DropZone.svelte";
   import Title from "./Title.svelte";
   import Comment from "./Comment.svelte";
 </script>
@@ -9,15 +10,13 @@
   <div class="flex flex-col space-y-4">
     <Title number="1" text="Upload photo" />
 
-    <div class="p-3 bg-[#EEEEEE] rounded-3xl flex-grow flex flex-col">
-      <img
-        class="rounded-2xl w-auto h-full flex-grow object-cover max-h-[320px]"
-        src="https://picsum.photos/600/700"
-        alt=""
-      />
+    <div class="p-3 bg-[#EEEEEE] rounded-3xl flex-grow flex flex-col h-full">
+      <div class="flex-grow">
+        <DropZone />
+      </div>
 
       <span class="block font-semibold mt-2">Examples</span>
-      <div class="grid grid-cols-4 gap-4 mt-2">
+      <div class="grid grid-cols-4 gap-4 mt-2 min-h-[100px]">
         <img
           src="https://picsum.photos/100/100"
           alt="Example 1"
