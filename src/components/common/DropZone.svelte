@@ -1,10 +1,14 @@
 <script>
   import { onMount } from "svelte";
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher();
   let selectedImage;
   let dragOver = false;
+  let file;
 
   function handleFileInput(event) {
-    const file = event.target.files[0];
+    file = event.target.files[0];
     if (file && file.type.startsWith("image/")) {
       selectedImage = URL.createObjectURL(file);
     }
@@ -22,7 +26,7 @@
   function handleDrop(event) {
     event.preventDefault();
     dragOver = false;
-    const file = event.dataTransfer.files[0];
+    file = event.dataTransfer.files[0];
     if (file && file.type.startsWith("image/")) {
       selectedImage = URL.createObjectURL(file);
     }
@@ -35,6 +39,12 @@
       }
     };
   });
+
+  $: if (selectedImage) {
+    dispatch("imageSelected", {
+      image: file,
+    });
+  }
 </script>
 
 {#if selectedImage}
@@ -78,12 +88,12 @@
       <p class="text-sm text-gray-500">or</p>
     </div>
 
-    <label
-      for="fileInput"
-      class="cursor-pointer bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+    <button
+      class="btn btn-sm btn-neutral rounded-2xl"
+      on:click={() => document.getElementById("fileInput").click()}
     >
       Choose File
-    </label>
+    </button>
     <input
       id="fileInput"
       type="file"

@@ -1,8 +1,13 @@
 ---
-import DefaultLayout from "../layouts/DefaultLayout.astro";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import FeedbackApp from "../../components/feedback/FeedbackApp.svelte";
 ---
 
 <DefaultLayout
   subtitle="Create the home of your dreams with AI | Roomake"
   description="Design and visualize your dream home using our AI-powered tool. Transform your ideas into reality effortlessly with Roomake."
-/>
+>
+  <div class="mb-8">
+    <FeedbackApp client:idle />
+  </div>
+</DefaultLayout>
