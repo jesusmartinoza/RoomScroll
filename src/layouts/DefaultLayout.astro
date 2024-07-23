@@ -2,6 +2,7 @@
 import "@astrojs/tailwind/base.css";
 import SiteMeta from "../components/SiteMeta.astro";
 import Header from "../components/common/Header.astro";
+import Footer from "../components/common/Footer.astro";
 import { DEBUG } from "../utils/config";
 
 const {
@@ -52,8 +53,9 @@ const {
       )
     }
     <Header />
-    <main id="main-content" class="pt-20">
+    <main class="pt-20">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>

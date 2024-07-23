@@ -6,7 +6,7 @@
 <div class="p-3 bg-[#EEEEEE] rounded-full">
   <div class="flex items-center">
     <div
-      class="w-8 h-8 bg-lime-300 rounded-full flex items-center justify-center text-black font-bold mr-3 text-2xl"
+      class="w-8 h-8 bg-[#FFD5C2] rounded-full flex items-center justify-center text-[#F18F3A] font-bold mr-3 text-2xl"
     >
       {number}
     </div>

@@ -3,6 +3,257 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
 <DefaultLayout
-  subtitle="Create the home of your dreams with AI | Roomake"
-  description="Design and visualize your dream home using our AI-powered tool. Transform your ideas into reality effortlessly with Roomake."
-/>
+  subtitle="Transform Your Home with AI-Powered Design | Roomake"
+  description="Revolutionize your living space with Roomake's AI tools. Get instant room feedback and stunning makeovers to create the home of your dreams."
+>
+  <div class="bg-[#FFD5C2]">
+    <div class="relative">
+      <div class="container z-10 relative mx-auto">
+        <img
+          src="/images/industrial-loft-woman.jpg"
+          alt="Modern interior design"
+          class="w-full h-[500px] object-cover rounded-2xl mx-auto mt-16"
+        />
+
+        <div class="flex text-start">
+          <div>
+            <h1 class="text-6xl font-bold mb-4 pt-8 text-orange-950">
+              Transform and explore <br /> your space with AI
+            </h1>
+
+            <p class="text-xl mb-8 max-w-[600px] text-orange-900">
+              Curious about using <strong>AI for home design</strong>? Our tools
+              can give you advices and show you
+              <strong>different looks for your rooms</strong>.
+            </p>
+          </div>
+          <img
+            src="/images/yellow-furniture.jpg"
+            alt="Modern interior design"
+            class="w-44 h-56 object-cover rounded-2xl mx-auto -mt-16"
+          />
+        </div>
+      </div>
+
+      <div class="bg-white w-full h-[200px] absolute top-0 left-0 z-1"></div>
+    </div>
+    <div class="bg-[#FFD5C2] py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl"
+          >
+            <h2 class="text-3xl font-bold mb-4 text-orange-900">
+              AI Room Feedback
+            </h2>
+            <p class="mb-6 text-orange-800">
+              Get instant, personalized advice on your room's design. Simply
+              upload a photo and receive tailored suggestions from our AI.
+            </p>
+            <a
+              href="/tools/room-ai-feedback"
+              class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors duration-300"
+              >Try Room Feedback</a
+            >
+          </div>
+
+          <div
+            class="bg-white p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-xl"
+          >
+            <h2 class="text-3xl font-bold mb-4 text-orange-900">
+              AI Room Makeover
+            </h2>
+            <p class="mb-6 text-orange-800">
+              Visualize your dream room in seconds. Our AI will transform your
+              space with stunning design ideas tailored to your preferences.
+            </p>
+            <a
+              href="/tools/room-ai-design"
+              class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors duration-300"
+              >Start Room Makeover</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        How It Works
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-12 w-12 mx-auto mb-4 text-orange-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <h3 class="text-xl font-semibold mb-2">1. Upload Your Room</h3>
+            <p class="text-gray-600">
+              Take a photo of your room and upload it to our platform.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-12 w-12 mx-auto mb-4 text-orange-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+              ></path>
+            </svg>
+            <h3 class="text-xl font-semibold mb-2">2. Choose Your Style</h3>
+            <p class="text-gray-600">
+              Select from various design styles or describe your preferences.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-12 w-12 mx-auto mb-4 text-orange-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
+              ></path>
+            </svg>
+            <h3 class="text-xl font-semibold mb-2">3. Get AI Suggestions</h3>
+            <p class="text-gray-600">
+              Receive personalized design ideas and visualizations for your
+              space.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        Why Choose Roomake?
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="flex items-start">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Instant Visualization</h3>
+            <p class="text-gray-600">
+              See your room transformed in seconds, not days or weeks.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Personalized Advice</h3>
+            <p class="text-gray-600">
+              Get tailored suggestions based on your unique space and
+              preferences.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Budget-Friendly</h3>
+            <p class="text-gray-600">
+              Explore design ideas without the cost of hiring a professional
+              designer.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-green-500 mr-2 flex-shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"></path>
+          </svg>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Endless Possibilities</h3>
+            <p class="text-gray-600">
+              Experiment with various styles and layouts to find your perfect
+              design.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
