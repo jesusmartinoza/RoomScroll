@@ -1,7 +1,9 @@
 import type { APIRoute } from "astro";
-import { openai } from "@ai-sdk/openai";
+import { createOpenAI } from "@ai-sdk/openai";
 import { generateObject } from "ai";
 import { z } from "zod";
+
+const openai = createOpenAI({ apiKey: import.meta.env.OPENAI_KEY });
 
 export const POST: APIRoute = async ({ request }) => {
   try {
@@ -67,7 +69,6 @@ export const POST: APIRoute = async ({ request }) => {
         },
       ],
     });
-    console.log(result);
     return new Response(JSON.stringify({ data: result.object }));
   } catch (error) {
     console.error("Error getting document:", error);
