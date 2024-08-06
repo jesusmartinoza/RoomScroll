@@ -5,6 +5,7 @@
   let feedback;
   let userInput = "";
   let userImage;
+  let loading = false;
 
   // Handle image selected
   function handleImageSelected(event) {
@@ -12,13 +13,14 @@
   }
 
   // Submit image to AI
-  function submitImage() {
+  async function submitImage() {
     if (userImage) {
+      loading = true;
       const formData = new FormData();
       formData.append("image", userImage);
       formData.append("message", userInput);
 
-      fetch("/api/v1/feedback", {
+      await fetch("/api/v1/feedback", {
         method: "POST",
         body: formData,
       })
@@ -30,6 +32,8 @@
         .catch((error) => {
           console.error("Error sending image:", error);
         });
+
+      loading = false;
     }
   }
 </script>
@@ -58,13 +62,17 @@
           ></textarea>
         </div>
       </div>
-
       <button
-        class="btn btn-sm btn-primary rounded-2xl w-32 mx-auto"
-        disabled={!userImage}
+        class="btn btn-sm btn-primary rounded-2xl w-32 mx-auto flex items-center justify-center"
+        disabled={!userImage || loading}
         on:click={submitImage}
       >
-        Submit
+        {#if loading}
+          <div
+            class="animate-spin rounded-full h-4 w-4 border-t-2 border-b-2 border-white mr-2"
+          ></div>
+        {/if}
+        {loading ? "" : "Submit"}
       </button>
 
       <!--span class="block font-semibold mt-2">Examples</span>
